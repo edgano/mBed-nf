@@ -112,11 +112,12 @@ process mBed {
 
   script:
     """
+    set +e
     numRef=\$(cat $params.refs | wc -l)
     $baseDir/bin/mBed/mBed -infile ${sequences} -seedfile ${references} -method SeedMap -numInputSeeds \$numRef >>/dev/null
 
+    foo=\$?
     mv coordinates.out ${id}_coordinates.out
-    mv distMat.out ${id}_distMat.out
     """
 }
 
