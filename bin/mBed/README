@@ -1,0 +1,47 @@
+COMPILATION
+============================================================
+
+Unpack the source, cd into the newly created directory and type 
+$ make
+This will (hopefully) create a binary called mBed
+
+We tested mBed on Ubuntu 9.04 and Debian 5.0.4 using gcc 4.3.
+
+
+
+USAGE
+============================================================
+
+Type
+$ ./mBed  -help
+to get some command line  argument help etc.
+
+The only required command-line argument is -infile FILE, where FILE should point to a multiple sequence file.
+mBed's default behavior is to create a guide tree called infile.dnd in the directory of the input file and a
+distance matrix called distMat.out in the current working directory.
+
+
+
+COMMAND LINE ARGUMENTS
+============================================================
+
+Output of mbed -help:
+
+typical usage: ./mBed [-infile pathToInputFile] [-speed speed] [-clustering clusteringType] [-method methodType] [-numInputSeeds number] [-numOutputDims number] [-useSeedsOnly true] [-findOutliers true] [-seedSelection method] [-seedTreatment method] [-evaluate False][-evaluate2 False] 
+
+where:
+ [-speed] can be either fast or slow (default = fast)
+ [-clustering] can be either upgma, kmeans, hybrid or none (default = upgma).
+ [-method] can be either SparseMap or SeedMap or FullMatrix
+ (default = FullMatrix).
+ [-numInputSeeds] is the number of initial seed sequences to use to start the pre-processing (SeedMap).
+ [-numOutputDims] is the final number of output dimensions (SeedMap, SparseMap).
+                  It embeds the sequences with respect to the first k reference groups. 
+ [-useSeedsOnly] is 'true' by default; forces the program to embed all sequences using just the seeds.
+ [-findOutliers] is 'true' by default; setting it as 'false' will gain speed (but may lose accuracy.)
+ [-seedSelection] may be 'naive','single', 'medoids' or 'multi'. This defines how the seeds are chosen.
+ [-seedSelection] may be 'naive','bySeqLen','bySeqDist' or 'bySeqFeats'. This defines how the seeds are treated.
+ [-evaluate] allows you to test the resultant vectors by correlation with the orginal distances
+ 
+
+If you do not specify any options, then the program will create a full distance matrix and upgma tree by default
