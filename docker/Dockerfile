@@ -28,11 +28,13 @@ RUN apt-get update \
                 vim
                 
 ## download the repo
-RUN wget https://github.com/edgano/mBed-nf mBed_hack
+RUN git clone https://github.com/edgano/mBed-nf && \
 
 ##compile SeqFile
-RUN cd mBed_hack/bin/SeqFilter && make
+    cd mBed-nf/bin/SeqFilter && \
+    make
 
 ##compile mBed
-RUN cd mBed_hack/bin/mBed && make
+RUN cd mBed-nf/bin/mBed && \
+    make
 
