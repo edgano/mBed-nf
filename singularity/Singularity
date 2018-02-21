@@ -21,9 +21,8 @@ MAINTAINER Edgar Garriga
 ##
 # install mBed
 ##
-  cd ../mBed
+  cd mBed-nf/bin/mBed
   make
 
 %environment
-    export LC_ALL=C
-export PATH=/mBed-nf/bin/mBed/:/mBed-nf/bin/SeqFilter:$PATH
+  export PATH=/mBed-nf/bin/mBed/:/mBed-nf/bin/SeqFilter:$PATH
