@@ -9,6 +9,7 @@ number_file = sys.argv[2] # Input interesting numbers file, one per line
 result_file = sys.argv[3] # Output fasta file
 
 wanted = set()
+
 with open(number_file) as f:
     for line in f:
         line = line.strip()
