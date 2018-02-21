@@ -21,7 +21,7 @@ MAINTAINER Edgar Garriga
 ##
 # install mBed
 ##
-  cd mBed-nf/bin/mBed
+  cd ../mBed
   make
 
 %environment
