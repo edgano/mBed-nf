@@ -25,4 +25,4 @@ MAINTAINER Edgar Garriga
   make
 
 %environment
-  export PATH=/mBed-nf/bin/mBed/:/mBed-nf/bin/SeqFilter:$PATH
+export PATH=/mBed-nf/bin/mBed/:/mBed-nf/bin/SeqFilter:$PATH
