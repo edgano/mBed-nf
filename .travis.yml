@@ -1,0 +1,11 @@
+machine:
+  java:
+    version: openjdk8
+  services:
+    - singularity
+    
+test:
+  override:
+    - curl -fsSL get.nextflow.io | bash
+    - ./nextflow run . -with-singularity :
+timeout: 3600
