@@ -8,7 +8,7 @@ In the fasta file, you will have all the sequences (seed+non seed) and in the fo
 
 Then, you just need to run nextflow with 
 ```
-nextflow run --trace nextflow.container main.nf --seqs=<fasta file> --refs=<seed file> -with-singularity
+nextflow run main.nf --seqs=<fasta file> --refs=<seed file> -with-singularity
 ```
 
 By default it is set to the location ```./tutorial/*.fa``` and ```./tutorial/*.seed```
