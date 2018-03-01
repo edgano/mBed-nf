@@ -16,12 +16,14 @@ MAINTAINER Edgar Garriga
 ##
   git clone https://github.com/edgano/mBed-nf
   cd mBed-nf/bin/SeqFilter
+  cd rm -rf lib
   make
 
 ##
 # install mBed
 ##
   cd ../mBed
+  rm *.o
   make
 
 %environment
