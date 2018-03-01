@@ -16,7 +16,7 @@ MAINTAINER Edgar Garriga
 ##
   git clone https://github.com/edgano/mBed-nf
   cd mBed-nf/bin/SeqFilter
-  cd rm -rf lib
+  rm -rf lib
   make
 
 ##
