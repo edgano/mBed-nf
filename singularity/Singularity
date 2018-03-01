@@ -23,7 +23,6 @@ MAINTAINER Edgar Garriga
 # install mBed
 ##
   cd ../mBed
-  rm *.o
   make
 
 %environment
