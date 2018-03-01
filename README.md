@@ -13,5 +13,11 @@ nextflow run main.nf --seqs=<fasta file> --refs=<seed file> -with-singularity
 
 By default it is set to the location ```./tutorial/*.fa``` and ```./tutorial/*.seed```
 
-The output file will be in ```./results/<seqID>_coordinates.out```
+The output will be 3 files:
+
+**./results/\<seqID\>_seed.out** where you can find the distance between the seeds against himself
+
+**./results/\<seqID\>_clean.out** where you can find the distance of your family against the seeds (seeds are not printed here)
+
+**./results/\<seqID\>_coordinates.out** where you can find all the distances
 
